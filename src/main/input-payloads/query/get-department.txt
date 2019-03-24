@@ -1,0 +1,45 @@
+query {
+  getDepartment(departmentId: 5) {
+    departmentId
+    departmentName
+    location {
+      locationId
+      streetAddress
+      city
+      postalCode
+      stateProvince
+      country {
+        countryId
+        countryCode
+        countryName
+        region {
+          regionId
+          regionName
+        }
+      }
+    }
+    employees(
+      pageInput: {
+        size: 2
+        sortField: "lastName"
+        sortDirection: DESC
+        page: 1
+      }
+    ) {
+      content {
+        employeeId
+        firstName
+        lastName
+        email
+      }
+      paging {
+        pageNumber
+        pageSize
+        totalNumberOfPages
+        totalNumberOfRecords
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+query {
+  getCountries(regionId:"1",
+    pageInput: {
+      size: 2
+      sortField: "countryCode"
+      page: 1
+      sortDirection: DESC
+    }
+  ) {
+    content {
+      countryId
+      countryCode
+      countryName
+      region {
+        regionId
+        regionName
+      }
+    }
+    paging {
+      hasNextPage
+      hasPreviousPage
+      pageNumber
+      pageSize
+      totalNumberOfPages
+      totalNumberOfRecords
+    }
+  }
+}

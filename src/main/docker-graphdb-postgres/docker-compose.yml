@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  graphdbpostgres:
+    image: postgres:10.7-alpine
+    volumes:
+    - graphdb-data:/var/lib/postgresql/data
+    ports:
+     - "5434:5432"
+    environment:
+     - POSTGRES_PASSWORD=test1234
+     - POSTGRES_USER=postgres
+     - POSTGRES_DB=graphdb
+volumes:
+  graphdb-data:
+    driver: local
