@@ -1,0 +1,15 @@
+mutation {
+  addEmployee(
+    departmentId: 7
+    employeeInput: {
+      firstName: "testFirstName"
+      lastName: "testLastName"
+      email: "fl@test.com"
+    }
+  ) {
+    employeeId
+    firstName
+    lastName
+    email
+  }
+}

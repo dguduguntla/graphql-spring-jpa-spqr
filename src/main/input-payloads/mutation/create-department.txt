@@ -1,0 +1,17 @@
+mutation {
+  createDepartment(
+    inputDepartment: {
+      departmentName: "IT Department"
+      location: {
+        streetAddress: "98281 N First St"
+        postalCode: "94086"
+        city: "San Jose"
+        stateProvince: "California"
+        countryCode: "US"
+      }
+    }
+  ) {
+    departmentId
+    departmentName
+  }
+}
