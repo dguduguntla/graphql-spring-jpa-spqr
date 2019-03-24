@@ -1,0 +1,13 @@
+mutation {
+  createCountry(
+    countryInput: {
+      regionName: "Europe"
+      countryName: "Russia"
+      countryCode: "RU"
+    }
+  ) {
+    countryId
+    countryCode
+    countryName
+  }
+}
